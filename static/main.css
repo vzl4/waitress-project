@@ -1,0 +1,124 @@
+body {
+    background-color: #ffffff;
+    font-family: 'Nunito Sans', sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    width: 600px;
+    height: 500px;
+    margin: auto;
+    box-shadow: 0.5rem 0.5rem 3rem rgba(0,0,0,0.2);
+}
+
+.form-signin {
+    max-width: 330px;
+    margin: 0 auto;
+}
+
+.form-signin-heading {
+    color: #394683;
+}
+
+.form-signin-info{
+  color: #aaa9a7;
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.form-signin .form-signin .checkbox {
+    margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+    font-weight: normal;
+}
+
+.form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+.form-signin input[type="text"] {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.danger {
+    color: red;
+}
+
+.mb-2 {
+    margin-bottom: 20px;
+}
+
+input::placeholder{
+    color: #ddd !important;
+    font-size: 14px;
+}
+
+.dashboard__container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: #e8e8e8;
+}
+
+.dashboard__container span {
+    opacity: 0.5;
+}
+
+#error-message {
+    color: red;
+}
+
+.report__container {
+    padding: 1.5rem 0;
+}
+
+.report_date__picker {
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.report_date__picker * {
+    margin-right: 1rem;
+}
+
+.no-bottom {
+    margin-bottom: 0;
+}
+
+.report_details p {
+    font-weight: bold;
+}
+
+.change_passwd_container {
+    margin-top: 3rem;
+}

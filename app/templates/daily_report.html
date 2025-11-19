@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/dashboard">Waitress</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/dashboard">Home</a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="/reports/daily">Daily Report <span class=" sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/reports/weekly">Weekly Report</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Monthly Report</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/change_password">Change Password</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">Sign Out</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<section class="report__container">
+    <section class="report_date__picker">
+        <input type="date" id="daily_report_date_picker" name="report__date" />
+        <div class="form-group no-bottom">
+            <select class="form-control" id="daily_report_type">
+                <option value="both">Both (Breakfast & Lunch)</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+            </select>
+        </div>
+        <button id="report__date_btn">Fetch Report</button>
+    </section>
+    <p id="error-message"></p>
+    <section class="report_details">
+        <p>Breakfast Count: <span id="report__breakfast_count"></span></p>
+        <p>Lunch Count: <span id="report__lunch_count"></span></p>
+    </section>
+    <hr />
+    <table id="report__table"></table>
+</section>
+{% endblock content %}
+
+{% block scripts %}
+<script type="text/javascript" src="{% static 'main.js' %}"></script>
+{% endblock scripts %}
